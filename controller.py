@@ -25,13 +25,10 @@ def runQuery(query):
 
 
 
-# Insert data into our table
-# Insert data into ALL columns 
-# insert_query = "INSERT into order VALUES(3, 'Tri Colour', 'Corgi', true)"
-insert_query = "INSERT INTO dogs (colour, breed, bark) VALUES('Tri Colour', 'Corgi', true)"
-select_query = "SELECT * FROM dogs"
+# Insert data into table
+insert_query = "INSERT INTO orders (order_id i, customer_name, size), drink) VALUES[]"
+select_query = "SELECT * FROM orders"
 runQuery(insert_query)
 print(runQuery(select_query).fetchall())
 
-# Sqlite ONLY persists data if it is commited
 connection.commit()
