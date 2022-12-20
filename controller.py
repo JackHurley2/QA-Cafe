@@ -10,7 +10,7 @@
   #  return order
 import sqlite3 as sqlite
 
-connection = sqlite.connect("new-db") # If it doesn't exist.. create it
+connection = sqlite.connect("orders") # If it doesn't exist.. create it
 local_cursor = connection.cursor() # .cursor() returns a cursor we can use 
 
 admin_query = "SELECT * FROM sqlite_master"
