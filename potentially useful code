@@ -1,0 +1,11 @@
+
+#opening other files and adding data to them 
+fruitFile = open("fruit.txt", "r")
+data = fruitFile.readline()
+print(data)
+fruitFile.close()
+
+fruitFile = open("fruit.txt", "a")
+fruitFile.write("kiwi")
+fruitFile.close()
+print(data)
