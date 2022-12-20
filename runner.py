@@ -1,6 +1,6 @@
 # The runner contains the code to Create a User Interface for the Cafe to interact with
 # This 'runs' the code and will interact with the Controller directly
-from controller import *
+from controller import insertOrder
 
 num1 = """(-------- Welcome to QA Cafe --------
 What can we help you with?

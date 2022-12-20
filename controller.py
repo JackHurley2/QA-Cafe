@@ -8,31 +8,26 @@
 #def read_by_id(id):
  #   order = service.read_by_id(id)
   #  return order
-
-  
-import runner
 import sqlite3 as sqlite
 
-connection = sqlite.connect("orders") # If it doesn't exist.. create it
+connection = sqlite.connect("new-db") # If it doesn't exist.. create it
 local_cursor = connection.cursor() # .cursor() returns a cursor we can use 
 
 admin_query = "SELECT * FROM sqlite_master"
-create_query = ("CREATE TABLE orders (order_id integer primary key autoincrement, customer_name VARCHAR(20), size VARCHAR(10), drink VARCHAR(15))")
+create_query = "CREATE TABLE orders (order_id integer primary key autoincrement, customer_name VARCHAR(20), size VARCHAR(10), drink VARCHAR(15))"
 
 def runQuery(order):
     data = local_cursor.execute(order) # our cursor should run our query
     return data
 
-
-
 # Insert data into table
-insert_query = "INSERT INTO orders (customer_name, size, drink) values('jack','size','drink')"
+insert_query = "INSERT INTO orders (customer_name, main, size, sauce, drink) values('name','main','size','sauce','drink')"
 select_query = "SELECT * FROM orders"
-runQuery(insert_query)
+#runQuery(create_query)
 print(runQuery(select_query).fetchall())
 
 def insertOrder(order):
-    query = f"insert into orders (customer_name, size, drink) values('{order[0]}','{order[2]}','{order[4]}')"
+    query = f"insert into orders (customer_name, main, size, sauce, drink) values('{order[0]}','{order[1]}','{order[2]}','{order[3]}','{order[4]}')"
     runQuery(query)
 
 connection.commit()
