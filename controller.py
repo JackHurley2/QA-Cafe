@@ -10,7 +10,7 @@ def read_by_id(id):
     return order
 
   
-
+import runner.py
 import sqlite3 as sqlite
 
 connection = sqlite.connect("new-db") # If it doesn't exist.. create it
@@ -23,18 +23,11 @@ def runQuery(query):
     data = local_cursor.execute(query) # our cursor should run our query
     return data
 
-# def createQuery(query):
-#     local_cursor.execute(query)
-#     return True
 
-# runQuery(create_query)
-
-# fetchall() works like readlines(), reads the data from the file
-# print(runQuery(admin_query).fetchall())
 
 # Insert data into our table
 # Insert data into ALL columns 
-# insert_query = "INSERT into dogs VALUES(3, 'Tri Colour', 'Corgi', true)"
+# insert_query = "INSERT into order VALUES(3, 'Tri Colour', 'Corgi', true)"
 insert_query = "INSERT INTO dogs (colour, breed, bark) VALUES('Tri Colour', 'Corgi', true)"
 select_query = "SELECT * FROM dogs"
 runQuery(insert_query)
