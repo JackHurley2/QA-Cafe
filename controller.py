@@ -10,7 +10,7 @@ def read_by_id(id):
     return order
 
   
-import runner.py
+import runner
 import sqlite3 as sqlite
 
 connection = sqlite.connect("new-db") # If it doesn't exist.. create it
