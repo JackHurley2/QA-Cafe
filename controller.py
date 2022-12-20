@@ -14,7 +14,7 @@ connection = sqlite.connect("new-db") # If it doesn't exist.. create it
 local_cursor = connection.cursor() # .cursor() returns a cursor we can use 
 
 admin_query = "SELECT * FROM sqlite_master"
-create_query = "CREATE TABLE orders (order_id integer primary key autoincrement, customer_name VARCHAR(20), size VARCHAR(10), drink VARCHAR(15))"
+create_query = "CREATE TABLE orders (order_id integer primary key autoincrement, customer_name VARCHAR(20), main VARCHAR(20), size VARCHAR(10), sauce VARCHAR(20), drink VARCHAR(15))"
 
 def runQuery(order):
     data = local_cursor.execute(order) # our cursor should run our query
