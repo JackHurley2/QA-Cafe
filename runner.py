@@ -2,7 +2,7 @@
 # This 'runs' the code and will interact with the Controller directly
 
 
-num1= input("-------- Welcome to QA Cafe --------
+num1= input"(""-------- Welcome to QA Cafe --------
 What can we help you with?
 1) Place an Order
 2) Read Order By ID
@@ -23,6 +23,7 @@ if num1 == 1:
     sauce = input("what sauce would u like with that?")
     drink = input ("what drink would you like with that?")
     
+    order = [name, main, size, sauce, drink]
     elif num1 == 2:
     
     

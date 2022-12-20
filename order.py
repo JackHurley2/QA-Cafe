@@ -1,6 +1,6 @@
 # the order.py contains a constructor to create our order object, 
 # takes in string and numerical values from the runner / controller
-import runner.py
+import runner
 
 class order:
     def __init__(self, food, size, sauces, drink):
